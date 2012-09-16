@@ -17,6 +17,48 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.media.dec.jpeg.memcap=10000000
+
+# Some more stuff:
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-meta=true \
+    media.stagefright.enable-scan=true \
+    media.stagefright.enable-http=true \
+    persist.sys.scrollingcache=2
+    net.bt.name=Android-GingerDX
+
+# GingerDX files
+PRODUCT_COPY_FILES += \
+    vendor/cyanogen/prebuilt/common/gingerdx/GalleryDX.apk:/system/app/GalleryDX.apk \
+    vendor/cyanogen/prebuilt/common/gingerdx/HoloLauncher.apk:/system/app/HoloLauncher.apk \
+    vendor/cyanogen/prebuilt/common/gingerdx/GPSCountryOptimizer.apk:/system/app/GPSCountryOptimizer.apk \
+    vendor/cyanogen/prebuilt/common/gingerdx/libqpicjni88.so:/system/lib/libqpicjni88.so
+
+## Gapps
+PRODUCT_COPY_FILES += \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/FOTAKill.apk:system/app/FOTAKill.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/Gmail.apk:system/app/Gmail.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/MarketUpdater.apk:system/app/MarketUpdater.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/MediaUploader.apk:system/app/MediaUploader.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/SetupWizard.apk:system/app/SetupWizard.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/Talk.apk:system/app/Talk.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/app/Vending.apk:system/app/Vending.apk \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/etc/permissions/features.xml:system/etc/permissions/features.xml \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/lib/libtalk_jni.so:system/lib/libtalk_jni.so \
+	vendor/cyanogen/prebuilt/common/gingerdx/gapps/lib/libvoicesearch.so:system/lib/libvoicesearch.so
+
 # Board-specific init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/initlogo.rle:root/initlogo.rle \
