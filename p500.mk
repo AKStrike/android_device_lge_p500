@@ -28,12 +28,21 @@ PRODUCT_PROPERTY_OVERRIDES := \
     persist.sys.scrollingcache=2
     net.bt.name=Android-GingerDX
 
+## Extra Cyanogen vendor files
+PRODUCT_COPY_FILES += \
+    vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # GingerDX files
 PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/common/gingerdx/GalleryDX.apk:/system/app/GalleryDX.apk \
     vendor/cyanogen/prebuilt/common/gingerdx/HoloLauncher.apk:/system/app/HoloLauncher.apk \
     vendor/cyanogen/prebuilt/common/gingerdx/GPSCountryOptimizer.apk:/system/app/GPSCountryOptimizer.apk \
     vendor/cyanogen/prebuilt/common/gingerdx/libqpicjni88.so:/system/lib/libqpicjni88.so
+
+## SuperSU
+PRODUCT_COPY_FILES += \
+	vendor/cyanogen/prebuilt/common/gingerdx/SuperSU.apk:system/app/SuperSU.apk \
+	vendor/cyanogen/prebuilt/common/xbin/su:system/xbin/su
 
 ## Gapps
 PRODUCT_COPY_FILES += \
