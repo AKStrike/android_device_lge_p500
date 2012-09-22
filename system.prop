@@ -2,6 +2,12 @@
 # system.prop for p500
 #
 
+#Tweaks
+logcat.live=disable
+ro.kernel.android.checkjni=0
+ro.service.swiqi.supported=true
+persist.service.swiqi.enable=1
+
 rild.libpath=/system/lib/libril-qc-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
