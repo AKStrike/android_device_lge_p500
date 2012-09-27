@@ -37,12 +37,19 @@ PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/common/gingerdx/GalleryDX.apk:/system/app/GalleryDX.apk \
     vendor/cyanogen/prebuilt/common/gingerdx/HoloLauncher.apk:/system/app/HoloLauncher.apk \
     vendor/cyanogen/prebuilt/common/gingerdx/GPSCountryOptimizer.apk:/system/app/GPSCountryOptimizer.apk \
-    vendor/cyanogen/prebuilt/common/gingerdx/libqpicjni88.so:/system/lib/libqpicjni88.so
+    vendor/cyanogen/prebuilt/common/gingerdx/libqpicjni88.so:/system/lib/libqpicjni88.so \
+    vendor/cyanogen/prebuilt/common/gingerdx/ESFileExplorer.apk:/system/app/ESFileExplorer.apk \
+    vendor/cyanogen/prebuilt/common/gingerdx/gps.conf:/system/etc/ \
+    vendor/cyanogen/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
+    vendor/cyanogen/prebuilt/common/gingerdx/ICSandwich.apk:system/app/ICSandwich.apk 
+
+
 
 ## SuperSU
 PRODUCT_COPY_FILES += \
 	vendor/cyanogen/prebuilt/common/gingerdx/SuperSU.apk:system/app/SuperSU.apk \
-	vendor/cyanogen/prebuilt/common/xbin/su:system/xbin/su
+	vendor/cyanogen/prebuilt/common/xbin/su:system/xbin/su \
+
 
 ## Gapps
 PRODUCT_COPY_FILES += \
