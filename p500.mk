@@ -1,7 +1,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+#$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/lge/p500/p500-vendor.mk)
 
@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 ## SuperSU
 PRODUCT_COPY_FILES += \
 	vendor/cyanogen/prebuilt/common/gingerdx/SuperSU.apk:system/app/SuperSU.apk \
-	vendor/cyanogen/prebuilt/common/xbin/su:system/xbin/su \
+	vendor/cyanogen/prebuilt/common/xbin/su:system/xbin/su 
 
 
 ## Gapps
